@@ -15,22 +15,13 @@ import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import team3929.commands.CommandBase;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import java.io.IOException;
-import team3929.ShooterRPMCommands.BackOfKey;
-import team3929.ShooterRPMCommands.Fender;
-import team3929.ShooterRPMCommands.FullPower;
-import team3929.ShooterRPMCommands.ManShooterControl;
-import team3929.ShooterRPMCommands.TurnOffShooter;
 import team3929.commands.DriveCommands.DriveStraight;
 import team3929.commands.DriveCommands.DriveWithJoystick;
 import team3929.commands.DriveCommands.LockDrivetrain;
 import team3929.commands.DriveCommands.Turn;
 import team3929.commands.DriveCommands.UnlockDriveTrain;
 import team3929.commands.ManualShooterControl;
-import team3929.commands.GiverAuton;
-import team3929.commands.ShooterAutonDriveArm;
-
-
+import team3929.ShooterTestCommands.*;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -43,35 +34,44 @@ public class LarryByrd extends IterativeRobot {
 
     Command autonomousCommand;
     SendableChooser autoChooser;    
-    
-    Command shooterCommand;
+    SendableChooser shooterTester;
+     Command shooterCommand;
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
     public void robotInit() {
-        try {
-            // instantiate the command used for the autonomous period
-            NetworkTable.initialize();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        // instantiate the command used for the autonomous period
+        NetworkTable.initialize();
 
         autoChooser = new SendableChooser();
-        
-        autoChooser.addObject("Give Away Balls", new GiverAuton());
-        autoChooser.addObject("Shoot balls and push down bridge", new ShooterAutonDriveArm());
-        
+        autoChooser.addObject("Turn", new Turn(4));
+        autoChooser.addObject("Drive Straight", new DriveStraight(4));
+        autoChooser.addObject("Lock drivetrain", new LockDrivetrain());
+        autoChooser.addObject("Unlock drivetrain", new UnlockDriveTrain());
+        autoChooser.addDefault("Drive With Joystick", new DriveWithJoystick());
+        shooterTester.addDefault("Manual", new ManualShooterControl());
+        shooterTester.addObject(".1", new Speed1());
+        shooterTester.addObject(".2", new Speed2());
+        shooterTester.addObject(".3", new Speed3());
+        shooterTester.addObject(".4", new Speed4());
+        shooterTester.addObject(".5", new Speed5());
+        shooterTester.addObject(".6", new Speed6());
+        shooterTester.addObject(".7", new Speed7());
+        shooterTester.addObject(".8", new Speed8());
+        shooterTester.addObject(".9", new Speed9());
+        shooterTester.addObject(".10", new Speed10());
         SmartDashboard.putData("autoChooser", autoChooser);
-        
+        SmartDashboard.putData("Shooter Testing",shooterTester);
         SmartDashboard.putData("Scheduler", Scheduler.getInstance());
+        
         CommandBase.init();
     }
     
     public void autonomousInit() {
         // schedule the autonomous command (example)
-       shooterCommand = (Command) autoChooser.getSelected();
-       shooterCommand.start();
+       
+
     }
 
     /**
@@ -88,9 +88,11 @@ public class LarryByrd extends IterativeRobot {
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
 		
-               CommandBase.init();
+                CommandBase.init();
                 //initializing commandbase is crucial.  Without this small class, nothing would happen.  
-                shooterCommand = (Command) new ManShooterControl();
+                autonomousCommand = (Command) autoChooser.getSelected();
+                autonomousCommand.start();
+                shooterCommand = (Command) shooterTester.getSelected();
                 shooterCommand.start();
 
     }
@@ -100,8 +102,8 @@ public class LarryByrd extends IterativeRobot {
      */
     public void teleopPeriodic() {
 
-                    
-                    
+                    autonomousCommand = (Command) autoChooser.getSelected();
+       
                     Scheduler.getInstance().run();
                 
         
