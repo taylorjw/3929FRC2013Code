@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/54/tags/v1/team3929/subsystems
+END
+MechanismBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/54/tags/v1/team3929/subsystems/MechanismBase.java
+END
+ArmControl.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/54/tags/v1/team3929/subsystems/ArmControl.java
+END
+Shooter.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/54/tags/v1/team3929/subsystems/Shooter.java
+END
+MechanismState.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/54/tags/v1/team3929/subsystems/MechanismState.java
+END
+BallIntake.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/54/tags/v1/team3929/subsystems/BallIntake.java
+END
+Vision.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/54/tags/v1/team3929/subsystems/Vision.java
+END
+DriveTrain.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/54/tags/v1/team3929/subsystems/DriveTrain.java
+END
+ExampleSubsystem.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/54/tags/v1/team3929/subsystems/ExampleSubsystem.java
+END
+Chassis.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/54/tags/v1/team3929/subsystems/Chassis.java
+END

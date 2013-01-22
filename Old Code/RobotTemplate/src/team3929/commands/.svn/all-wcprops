@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/54/tags/v1/team3929/commands
+END
+ManualShooterControl.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/54/tags/v1/team3929/commands/ManualShooterControl.java
+END
+ShooterControl.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/54/tags/v1/team3929/commands/ShooterControl.java
+END
+AutoAimShooterControl.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/54/tags/v1/team3929/commands/AutoAimShooterControl.java
+END
+CommandBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/54/tags/v1/team3929/commands/CommandBase.java
+END
+ExampleCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/54/tags/v1/team3929/commands/ExampleCommand.java
+END
+CheckBalls.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/54/tags/v1/team3929/commands/CheckBalls.java
+END
+ArmOn.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/54/tags/v1/team3929/commands/ArmOn.java
+END
