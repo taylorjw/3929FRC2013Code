@@ -23,15 +23,19 @@ public class DiscIntake {
     }
     
     public void turnOnRoller(){
-        rollerMotor.set(1); // change this later
+        rollerMotor.set(.5); // change this later
     }
     
     public void turnOffRoller(){
-        rollerMotor.set(0.0); // change this later
+        rollerMotor.set(0.0);
     }
     
     public void reverseRoller(){
-        rollerMotor.set(-1); // change this later
+        rollerMotor.set(-.5); // change this later
+    }
+    
+    public boolean checkSensor(){
+        return aSensor.get();
     }
     
 }
